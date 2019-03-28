@@ -1,0 +1,4 @@
+HORNET_CONFIG_DIR_APPLI=/var/lib/nodejs/#{INSTANCE_NAME}/config
+HORNET_CONFIG_DIR_INFRA=/etc/nodejs/#{INSTANCE_NAME}
+HORNET_GLOBAL_MODULE_DIR=/usr/local/share/hornet-global-modules
+NODE_ENV=production

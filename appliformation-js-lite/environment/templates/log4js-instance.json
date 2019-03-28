@@ -1,0 +1,18 @@
+{
+    "appenders": {
+       "dateFile": {
+          "type": "dateFile",
+          "pattern": ".yyyy-MM-dd",
+          "filename":"/var/log/nodejs/#{INSTANCE_NAME}/#{INSTANCE_NAME}.log",
+          "layout": {
+             "type": "pattern",
+             "pattern": "%d{ISO8601}|%x{tid}|%x{user}|%p|%c|%x{fn}|%m"
+          },
+          "compress": true,
+          "keepFileExt": true
+       }
+    },
+    "categories": {
+       "default": { "appenders": ["dateFile"], "level": "INFO" }
+    }
+ }

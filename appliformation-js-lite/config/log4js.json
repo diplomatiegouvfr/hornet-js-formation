@@ -1,0 +1,28 @@
+{
+  "appenders": {
+    "console": {
+      "type": "console",
+      "layout": {
+        "type": "pattern",
+        "pattern": "%[%d{ISO8601}|%x{tid}|%x{user}|%p|%c|%x{fn}|%m%]"
+      }
+    }
+    /*,
+    "dateFile": {
+      "type": "dateFile",
+      "pattern": ".yyyy-MM-dd",
+      "filename": "log/appli.log", //DEV
+      //"filename": "/var/log/nodejs/appli/appli.log", //PROD
+      "layout": {
+        "type": "pattern",
+        "pattern": "%d{ISO8601}|%x{tid}|%x{user}|%p|%c|%x{fn}|%m"
+      },
+      "compress": true,
+      "keepFileExt": true
+    }
+    */
+  },
+  "categories": {
+    "default": { "appenders": ["console" /*, "dateFile"*/], "level": "INFO" }
+  }
+}

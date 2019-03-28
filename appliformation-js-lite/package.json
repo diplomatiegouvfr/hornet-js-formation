@@ -1,0 +1,52 @@
+{
+  "name": "appliformation-js-lite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "appliformation-js-lite",
+  "tsDefinitionDependencies": {
+    "hornet-js-ts-typings": "5.2.3",
+    "hornet-js-utils-dts": "5.2.3",
+    "hornet-js-database-dts": "5.2.3",
+    "hornet-js-bean-dts": "5.2.3",
+    "hornet-js-core-dts": "5.2.3",
+    "hornet-js-components-dts": "5.2.3",
+    "hornet-js-react-components-dts": "5.2.3",
+    "hornet-js-passport-dts": "5.2.3",
+    "hornet-js-test-dts": "5.2.3"
+  },
+  "appDependencies": {
+    "hornet-themes-intranet": "5.2.3",
+    "hornet-js-components": "5.2.3",
+    "hornet-js-react-components": "5.2.3",
+    "hornet-js-database": "5.2.3",
+    "hornet-js-bean": "5.2.3",
+    "hornet-js-core": "5.2.3",
+    "hornet-js-utils": "5.2.3",
+    "hornet-js-passport": "5.2.3",
+    "connect-flash": "0.1.1",
+    "passport": "0.2.1",
+    "passport-local": "1.0.0",
+    "sha1": "1.1.1",
+    "chart.js": "2.6.0",
+    "pg": "6.0.1",
+    "pg-hstore": "2.3.2",
+    "pg-native": "1.10.0",
+    "sqlite3": "3.1.13"
+  },
+  "buildDependencies": {},
+  "testDependencies": {
+    "hornet-js-test": "5.2.3"
+  },
+  "scripts": {
+    "init-dev": "hb install",
+    "start": "node index.js",
+    "plop": "node ./node_modules/plop"
+  },
+  "devDependencies": {
+    "inquirer-directory": "2.1.0",
+    "inquirer-file": "1.0.0",
+    "plop": "2.0.0"
+  },
+  "author": "MEAE - Ministère de l'Europe et des Affaires étrangères",
+  "hornetJsBuilder": "1.6.0"
+}
