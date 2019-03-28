@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "moduleResolution": "classic",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "noResolve": true,
+    "importHelpers": true,
+    "baseUrl": "./",
+    "paths": {
+      "tslib": [
+        "definition-ts/hornet-js-ts-typings/tslib/tslib.d.ts"
+      ]
+    }
+  },
+  "include": [
+    "./**/*.ts*",
+    "definition-ts/**/*.d.ts"
+  ],
+  "exclude": [
+    "istanbul",
+    "node_modules",
+    "static"
+  ]
+}

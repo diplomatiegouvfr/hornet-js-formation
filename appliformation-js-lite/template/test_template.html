@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="icon" type="image/png" href="img/logoHornet.png"/>
+    <title><%=message%></title>
+    <script lang="javascript">
+        let url = window.location.protocol + "//" +  window.location.host + window.location.pathname.substring(0, window.location.pathname.indexOf("/", 1));
+
+        creatLinkStyle("/<%=project.static%>hornet-themes-intranet/css/theme.css", url);
+        creatLinkStyle("/<%=project.static%>css/theme.css", url);
+
+
+        function creatLinkStyle(styleUrl, url) {
+            var link = document.createElement( "link" );
+            link.href = url + styleUrl;
+            link.type = "text/css";
+            link.rel = "stylesheet";
+
+            document.getElementsByTagName( "head" )[0].appendChild( link );
+        };
+    </script>
+</head>
+<body>
+<div id="app">
+    <div id="site">
+        <div class="header" id="header-container">
+            <header>
+                <div id="header">
+                    <div class="inside">
+                        <div class="fl"><a class="header-link"
+                                           title="Retour à l&#x27;accueil de Diplonet"
+                                           href="http://intranet.diplomatie.gouv.fr/">diplonet</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="banner">
+                    <div role="banner" class="inside">
+                        <div class="fl menu-main-conteneur ">
+                            <nav id="menu-main" aria-label="Menu principal" data-title="Menu" class="menuHaut"></nav>
+                        </div>
+                        <div class="fl w10 mls"><a class="sub-header-link"
+                                                   href="/appliformation-js-lite/accueil"
+                                                   title="Hornet - Retour vers la page d&#x27;accueil "
+                                                   id="img-logo"><img
+                                src="<%=project.static%>img/logoHornet.png"
+                                alt="appliformation-js-lite"/></a></div>
+                        <div class="fl mls"><a class="sub-header-link" href="/appliformation-js-lite/accueil"
+                                               title="Hornet - Retour vers la page d&#x27;accueil ">
+                            <h1 id="app-title"><%=messages.applicationTitle%></h1></a></div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <main id="page" role="main">
+            <span></span>
+            <div id="nfe-page">
+                <div >
+                    <span><%=message%></span>
+                </div>
+                <h2 class="nfe-title"><%=message%></h2><a
+                    href="/appliformation-js-lite/accueil" class="hornet-button nfe-button">Retour à la page d&#x27;accueil</a>
+            </div>
+        </main>
+        <footer id="ft" class="footer-container" role="contentinfo">
+            <div id="footer" class="footer-content inside">
+                <div class="fl mll">
+                    <ul class="footer-links">
+                        <li><a href="/appliformation-js-lite/planAppli"
+                               title="Plan de l&#x27;application l&#x27; <%=messages.applicationTitle%>">Plan de l&#x27;application</a>
+                        </li>
+                        <li><a href="/appliformation-js-lite/politiqueAccessibilite"
+                               title="Politique d&#x27;accessibilité de l&#x27; <%=messages.applicationTitle%>">Accessibilité</a>
+                        </li>
+                        <li><a href="/appliformation-js-lite/contact"
+                               title="Contact de l&#x27; <%=messages.applicationTitle%>">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fr mrl"><p><%=messages.applicationTitle%> - <%= project.version %></p></div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script lang="javascript">
+    let links = document.getElementsByTagName("a");
+    
+    for(let i = 0; i < links.length; i++) {
+        let link = links.item(i);
+        if (link.pathname && link.pathname.indexOf("/") == 0) {
+            link.href = url + link.pathname;
+        }
+    }
+
+    let imgs = document.getElementsByTagName("img");
+    
+    for(let i = 0; i < imgs.length; i++) {
+        let img = imgs.item(i);
+        if (img.attributes && img.attributes.src && img.attributes.src.nodeValue.indexOf("/") == 0) {
+            img.src = url + img.attributes.src.nodeValue;
+        }
+    }
+</script>
+</body>
+</html>

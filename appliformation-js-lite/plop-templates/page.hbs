@@ -1,0 +1,44 @@
+import { Utils } from "hornet-js-utils";
+import { Logger } from "hornet-js-utils/src/logger";
+import * as React from "react";
+import { HornetPage } from "hornet-js-react-components/src/widget/component/hornet-page";
+import { HornetComponentProps } from "hornet-js-components/src/component/ihornet-component";
+{{#if createServiceClass}}
+import { {{sevicePageClass}} } from "src/services/page/{{serviceDirectory}}{{creatPathService}}/{{snakeCase sevicePageClass}}";
+{{else}}
+import { {{sevicePageClass}} } from "src/services/page/{{unixPathCase serviceFile}}";
+{{/if}}
+
+const logger: Logger = Utils.getLogger("{{> applicationName }}.views{{dotCase pageDirectory}}{{packageCase creatPathPage}}.{{snakeCase sevicePageClass}}");
+
+/**
+ * {{pageClassDescription}}
+ */
+export class {{camelCase pageClass}} extends HornetPage<{{sevicePageClass}}, HornetComponentProps, any> {
+
+    constructor(props?, context?) {
+
+        super(props, context);
+
+    }
+
+    /**
+     * 
+     * @override
+     */
+    public prepareClient(): void {
+        super.prepareClient();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    render(): JSX.Element {
+
+        logger.trace("VIEW {{camelCase pageClass}} render");
+
+        return (
+        );
+    }
+
+}
