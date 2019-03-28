@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "title": "Recherche de personnes",
+    "description": "Validation des données du formulaire de recherche de personnes",
+    "type": "object",
+    "properties": {
+        "nom": {
+            "description": "Le nom de la personne à créer",
+            "type": "string"
+        },
+        "prenom": {
+            "description": "Le prénom de la personne à créer",
+            "type": "string"
+        },
+        "age": {
+            "description": "L'age de la personne à créer",
+            "type": "number",
+            "maxLength": 2
+        },
+        "sexeCreation": {
+            "description": "Le sexe de la personne à creer",
+            "type": "string"
+        }
+    },
+    "required": [
+        "nom",
+        "sexeCreation",
+        "age",
+        "prenom"
+    ]
+}

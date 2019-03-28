@@ -1,0 +1,254 @@
+{
+  "contextPath": "appliformation-js-lite",
+  "welcomePage": "/accueil",
+  "localeI18n": {
+    "locale": "fr-FR",
+    "lang": "fr"
+  },
+  "server": {
+    "route": "js1",
+    "port": 8888,
+    "portMonitor": 9999,
+    "keepAlive": true,
+    "keepAliveTimeout": 15000,
+    "maxConnections": 100,
+    "timeout": 300000,
+    "uploadFileSize": 1000000,
+    "uploadAntivirus": false,
+    "sessionTimeout": 1800000,
+    "stackTraceLimit": 100,
+    "bodyParserLimit": "50mb",
+    "rethrow": false,
+    "notifications": {
+      "sessionTimeoutDelay": 30000,
+      "notifSessionTimeoutRepeat": 5000
+    }
+    /*
+    "https": {
+      "cert": "/config/cert/cert.pem",
+      "key": "/config/cert/key.pem",
+      "passphrase": "password"
+    }
+    //ex : openssl req -x509 -sha256 -newkey rsa:2048 -keyout key.pem -out cert.pem -days XXX
+    */
+  },
+  /*
+  "keystore": {
+    // Autorités de certification
+    "CAs": [
+      "/path/to/igca.pem"
+    ],
+
+    // Cas d'authentification SSL
+    "CERTs" : [
+      "/path/to/client/certificate/in/pem/format"
+    ],
+    "KEYs": [
+      {
+        "file": "/path/to/client/private/key/in/pem/format",
+        "passphrase": "abcdefgh"
+      }
+    ],
+
+
+    // Cas d'un conteneur PKCS12
+    "PKCS12": {
+      "file": "/path/to/pkcs12",
+      "passphrase": "abcdefgh"
+    }
+  },
+  */
+  "cookie": {
+    "httpOnly": true,
+    "secure": true
+  },
+  "themeName": "hornet-themes-intranet",
+  "security": {
+    "enabled": true,
+    "hpp": true,
+    "ieNoOpen": true,
+    "noSniff": true,
+    "csp": {
+      "enabled": true,
+      "connectSrc": [
+        "'self'"
+      ],
+      "scriptSrc": [
+        "'self'",
+        "'unsafe-inline'",
+        "'unsafe-eval'"
+      ],
+      "styleSrc": [
+        "'self'",
+        "'unsafe-inline'"
+      ],
+      "fontSrc": [
+        "'self'"
+      ],
+      "imgSrc": [
+        "'self'"
+      ],
+      "formAction": [
+        "'self'"
+      ],
+      "reportOnly": false,
+      "setAllHeaders": true,
+      "disableAndroid": false
+    },
+    "frameguard": {
+      "enabled": true
+    },
+    "xss": {
+      "enabled": true,
+      "setOnOldIE": true
+    },
+    "hpkp": {
+      "enabled": true,
+      "maxAge": 7776000000,
+      "sha256s": [
+        "AbCdEf123=",
+        "ZyXwVu456="
+      ],
+      "includeSubdomains": true,
+      "reportUri": null,
+      "reportOnly": false
+    },
+    "hsts": {
+      "enabled": false,
+      "maxAge": 10886400000,
+      "includeSubDomains": true,
+      "preload": false
+    },
+    "csrf": {
+      "enabled": true
+    }
+  },
+  "logClient": {
+    "remote": false,
+    "level": "INFO",
+    "appenders": {
+      "BrowserConsole": {
+        "type": "BrowserConsole",
+        //        "layout": {
+        //          "type": "pattern",
+        //          "pattern": "%p|%c|%m%"
+        //        },
+        "layout": {
+          "type": "THIN"
+        }
+      },
+      "Ajax": {
+        "type": "Ajax",
+        "layout": {
+          "type": "BASIC"
+        },
+        "threshold": 100,
+        "timeout": 3000,
+        "url": "/log"
+      }
+    }
+  },
+  "database": {
+    "config": {
+      "basename": "sequelize",
+      "username": "test",
+      "password": "test",
+      "options": {
+        "operatorsAliases": false,
+        "dialect": "sqlite",
+        "storage": "./database/database.sqlite",
+        "pool": {
+          "max": 15,
+          "min": 0,
+          "idle": 1000
+        },
+        "define": {
+          "timestamps": false
+        },
+        "loggingLevel": "DEBUG"
+      },
+      "reload": true
+    },
+    "configPostgres": {
+      "uri": "postgres://hornetjs@localhost:5433/appliformation-js-liteDB",
+      "options": {
+        "operatorsAliases": false,
+        "pool": {
+          "max": 5,
+          "min": 0,
+          "idle": 1000
+        },
+        "define": {
+          "timestamps": false
+        },
+        "loggingLevel": "INFO"
+      }
+    }
+  },
+  "antivirus": {
+    "host": "localhost",
+    "port": 3310,
+    "timeout": 60000
+  },
+  "mail": {
+    "config": {
+      "host": "127.0.0.1",
+      "port": 25,
+      "secure": false,
+      "connectionTimeout": 20000,
+      "tls": {
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "mock": {
+    "enabled": false,
+    "servicePage": {
+      "enabled": false
+    },
+    "serviceData": {
+      "enabled": false
+    }
+  },
+  "fullSpa": {
+    "enabled": false,
+    "host": "",
+    "name": "/services",
+    "staticPath": ""
+  },
+  "authentication": {
+    "loginUrl": "/login",
+    "logoutUrl": "/logout"
+    //    "saml": {
+    //      "enabled": false,
+    //      "configuration": {
+    //        "hostUrlReturnTo": "http://localhost:8889",
+    //        "callbackUrl": "/login",
+    //        "logoutCallbackUrl": "/logout",
+    //        "issuer": "http://localhost:8889/appliformation-js-lite",
+    //        "idp": [
+    //          {
+    //            "name": "idp",
+    //            "shibbolethUrl": "./config/idp/arobas/idp-metadata.xml",
+    //            "httpsCert": "./config/cert/arobas/arobas.dev.diplomatie.gouv.fr"
+    //          }
+    //        ]
+    //      }
+  },
+  "request": {
+    "cache": {
+      "client": {
+        "enabled": false,
+        "timetolive": 60
+      },
+      "server": {
+        "enabled": false,
+        "timetolive": 120
+      }
+    },
+    "timeout": {
+      "response": 10000,
+      "deadline": 60000
+    }
+  }
+}

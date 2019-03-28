@@ -1,0 +1,41 @@
+{
+  // Commentaires autorisés !!
+  "menu": [
+    {
+      "text": "navigation.welcome",
+      "url": "/accueil",
+      "visibleDansMenu": false,
+      "visibleDansPlan": true
+    },
+    {
+      "text": "navigation.accessibility",
+      "url": "/politiqueAccessibilite",
+      "visibleDansPlan": true,
+      "visibleDansMenu": false
+    },
+    {
+      "text": "navigation.contact",
+      "url": "/contact",
+      "visibleDansMenu": false,
+      "visibleDansPlan": true
+    },
+    {
+      "text": "navigation.help",
+      "url": "/aide",
+      "visibleDansMenu": false,
+      "visibleDansPlan": true
+    },
+    {
+      "text": "navigation.plan",
+      "url": "/planAppli",
+      "visibleDansMenu": false,
+      "visibleDansPlan": false
+    },
+    {
+      "text": "navigation.declarationconformity",
+      "url": "/declarationConformite",
+      "visibleDansMenu": false,
+      "visibleDansPlan": true
+    }
+  ]
+}
