@@ -1,0 +1,89 @@
+{
+  "contextPath": "#{APPLICATION_CONTEXT_ROOT}",
+  "cookie": {
+    "httpOnly": #{COOKIE_HTTP_ONLY},
+    "secure": #{COOKIE_SECURE}
+  },
+  "security": {
+    "enabled": #{SECURITY_ENABLED},
+    "hpp": true,
+    "ieNoOpen": true,
+    "noSniff": true,
+    "csp": {
+      "enabled": true
+    },
+    "frameguard": {
+      "enabled": true
+    },
+    "xss": {
+      "enabled": true
+    },
+    "hpkp": {
+      "enabled": true
+    },
+    "hsts": {
+      "enabled": false
+    },
+    "csrf": {
+      "enabled": true
+    }
+  },
+  "logClient": {
+    "remote": #{LOG_CLIENT_REMOTE},
+    "level": "#{LOG_CLIENT_LEVEL}",
+    "appenders": {
+      "BrowserConsole": {
+        "type": "BrowserConsole",
+        "layout": {
+          "type": "THIN"
+        }
+      }
+    }
+  },
+  "database": {
+    "config": {
+      "uri": "#{DATABASE_URI}",
+      "options" : {
+        "pool" : {
+          "max" : #{DATABASE_POOL_MAX},
+          "min" : #{DATABASE_POOL_MIN},
+          "idle" : #{DATABASE_POOL_IDLE}
+        },
+        "define": {
+          "timestamps" : false
+        },
+        "loggingLevel" : "#{DATABASE_LOGGING_LEVEL}"
+      }
+    }
+  },
+  "antivirus" : {
+    "host" : "#{ANTIVIRUS_HOST}",
+    "port" : #{ANTIVIRUS_PORT},
+    "timeout" : #{ANTIVIRUS_TIMEOUTE}
+  },
+  "mail": {
+    "config": {
+      "host": "#{MAIL_HOST}",
+      "port": #{MAIL_PORT},
+      "secure": #{MAIL_SECURE},
+      "connectionTimeout": #{MAIL_TIMEOUT},
+      "tls": {
+        "rejectUnauthorized": #{MAIL_TLS_REJECT}
+      }
+    },
+    "mailReceiver": "#{MAIL_RECEIVER}",
+    "mailSender": "#{MAIL_SENDER}"
+  },
+  "request": {
+    "cache": {
+      "client": {
+        "enabled": #{CACHE_CLIENT},
+        "timetolive": #{CACHE_CLIENT_TTL}
+      },
+      "server": {
+        "enabled": #{CACHE_SERVER},
+        "timetolive": #{CACHE_SERVER_TTL}
+      }
+    }
+  }
+}

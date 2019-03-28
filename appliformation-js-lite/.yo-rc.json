@@ -1,0 +1,10 @@
+{
+  "generator-hornet-js-lite": {
+    "appname": "appliformation js lite",
+    "appversion": "1.0.0",
+    "appdescription": "appliformation-js-lite",
+    "fmkversion": "5.2.1",
+    "theme": "hornet-themes-intranet",
+    "themeversion": "5.2.1"
+  }
+}

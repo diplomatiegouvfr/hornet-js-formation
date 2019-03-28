@@ -1,0 +1,25 @@
+.content-modal-body {
+    overflow: auto;
+    max-height: 700px;
+}
+
+.green-background-row td, .green-background-row td.hornet-datatable-sorted {
+    background-color: #54c08b /*!important*/
+}
+.red-background-row td, .red-background-row td.hornet-datatable-sorted  {
+    background-color: #f5716e /*!important*/
+}
+
+.yellow-background-row td, .yellow-background-row td.hornet-datatable-sorted  {
+    background-color: #dbf163 /*!important*/
+}
+
+#monHeaderRPA .datatable-title {
+    width: 70%;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: nowrap;
+    color: white;
+    flex: 1;
+}
