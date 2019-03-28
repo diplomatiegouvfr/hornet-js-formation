@@ -1,0 +1,47 @@
+{
+  "contextPath": "appliformation-js-spa",
+  "fullSpa": {
+    "enabled": true,
+    "host": "http://localhost/",
+    "name": "appliformation-js-service"
+  },
+  "services": {
+    "host": "http://localhost/",
+    "name": "appliformation-js-service"
+  },
+  "themeName": "hornet-themes-intranet",
+  "localeI18n": {
+    "locale": "fr-FR",
+    "lang": "fr"
+  },
+  "mock": {
+    "enabled": true,
+    "servicePage": {
+      "enabled": true
+    },
+    "serviceData": {
+      "enabled": true
+    }
+  },
+  "logClient": {
+    "remote": false,
+    "level": "TRACE",
+    "appenders": {
+      "BrowserConsole": {
+        "type": "BrowserConsole",
+        "layout": {
+          "type": "THIN"
+        }
+      },
+      "Ajax": {
+        "type": "Ajax",
+        "layout": {
+          "type": "BASIC"
+        },
+        "threshold": 100,
+        "timeout": 3000,
+        "url": "/log"
+      }
+    }
+  }
+}

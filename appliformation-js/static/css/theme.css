@@ -1,0 +1,14 @@
+.content-modal-body {
+    max-height: 700px;
+}
+
+.green-background-row td, .green-background-row td.hornet-datatable-sorted {
+    background-color: #54c08b /*!important*/
+}
+.red-background-row td, .red-background-row td.hornet-datatable-sorted  {
+    background-color: #f5716e /*!important*/
+}
+
+.yellow-background-row td, .yellow-background-row td.hornet-datatable-sorted  {
+    background-color: #dbf163 /*!important*/
+}

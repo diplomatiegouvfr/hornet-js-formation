@@ -1,0 +1,46 @@
+{
+  "name": "appliformation-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "appliformation-js",
+  "tsDefinitionDependencies": {
+    "hornet-js-ts-typings": "5.2.1",
+    "hornet-js-utils-dts": "5.2.1",
+    "hornet-js-core-dts": "5.2.1",
+    "hornet-js-components-dts": "5.2.1",
+    "hornet-js-react-components-dts": "5.2.1",
+    "hornet-js-passport-dts": "5.2.1",
+    "hornet-js-test-dts": "5.2.1"
+  },
+  "appDependencies": {
+    "hornet-themes-intranet": "5.2.1",
+    "hornet-js-components": "5.2.1",
+    "hornet-js-react-components": "5.2.1",
+    "hornet-js-core": "5.2.1",
+    "hornet-js-utils": "5.2.1",
+    "hornet-js-passport": "5.2.1",
+    "connect-flash": "0.1.1",
+    "passport": "0.2.1",
+    "passport-local": "1.0.0",
+    "sha1": "1.1.1",
+    "chart.js": "2.6.0",
+    "jsonwebtoken": "7.3.0"
+  },
+  "buildDependencies": {},
+  "testDependencies": {
+    "hornet-js-test": "5.2.1"
+  },
+  "scripts": {
+    "init-dev": "hb install",
+    "init-snapshot": "hb dependency:set-snapshot --dependencyVersionFix=hornet-js --module=hornet-js-core && hb dependency:set-snapshot --dependencyVersionFix=hornet-themes-intranet --module=hornet-themes-intranet && hb install",
+    "version": "echo $npm_package_version",
+    "plop": "node ./node_modules/plop"
+  },
+  "devDependencies": {
+    "inquirer-directory": "2.1.0",
+    "inquirer-file": "1.0.0",
+    "plop": "2.0.0"
+  },
+  "author": "MEAE - Ministère de l'Europe et des Affaires étrangères",
+  "hornetJsBuilder": "1.5.4"
+}

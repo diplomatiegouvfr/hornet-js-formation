@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Erreur <%=error%></title>
+    <script lang="javascript">
+        let url = window.location.protocol + "//" +  window.location.host + window.location.pathname.substring(0, window.location.pathname.indexOf("/", 1));
+
+        creatLink("/<%=project.static%>hornet-themes-intranet/css/theme.css", url, "text/css", "stylesheet");
+        creatLink("/<%=project.static%>css/theme.css", url, "text/css", "stylesheet");
+        creatLink("/<%=project.static%>img/logoHornet.png", url, "image/png", "icon");
+
+        function creatLink(styleUrl, url, type, rel) {
+            var link = document.createElement( "link" );
+            link.href = url + styleUrl;
+            link.type = type;
+            link.rel = rel;
+
+            document.getElementsByTagName( "head" )[0].appendChild( link );
+        };
+
+        function changeLink(tagName) {
+            let links = document.getElementsByTagName(tagName);
+        
+            for(let i = 0; i < links.length; i++) {
+                let link = links.item(i);
+                if (link.pathname && link.pathname.indexOf("/") == 0) {
+                    link.href = url + link.pathname;
+                } else if (link.attributes && link.attributes.href && link.attributes.href.nodeValue.indexOf("/") == 0) {
+                    link.href = url + link.attributes.href.nodeValue;
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+<div id="app">
+    <div id="site">
+        <div class="header" id="header-container">
+            <header>
+                <div id="header">
+                    <div class="inside">
+                        <div class="fl"><a class="header-link"
+                                           title="Retour à l&#x27;accueil de Diplonet"
+                                           href="http://intranet.diplomatie.gouv.fr/">diplonet</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="banner">
+                    <div role="banner" class="inside">
+                        <div class="fl menu-main-conteneur ">
+                            <nav id="menu-main" aria-label="Menu principal" data-title="Menu" class="menuHaut"></nav>
+                        </div>
+                        <div class="fl w10 mls"><a class="sub-header-link"
+                                                   href="/appliformation-js/accueil"
+                                                   title="Hornet - Retour vers la page d&#x27;accueil "
+                                                   id="img-logo"><img
+                                src="/<%=project.static%>img/logoHornet.png"
+                                alt="appliformation-js"/></a></div>
+                        <div class="fl mls"><a class="sub-header-link" href="/appliformation-js/accueil"
+                                               title="Hornet - Retour vers la page d&#x27;accueil ">
+                            <h1 id="app-title"><%=messages.applicationTitle%></h1></a></div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <main id="page" role="main">
+            <span></span>
+            <div id="nfe-page">
+                <div >
+                    <div id="nf-img" class="center w50 txtcenter" style="height: 100%; width:100%; vertical-align: middle; padding:4em;">
+                        <span style="font-size: 9vw; color: white; font-family: NotoSansUI-Bold; font-weight: bold;"><%=error%></span>
+                    </div>
+                </div>
+                <h2 class="nfe-title"><%=message%></h2><a
+                    href="/appliformation-js/accueil" class="hornet-button nfe-button">Retour à la page d&#x27;accueil</a>
+            </div>
+        </main>
+        <footer id="ft" class="footer-container" role="contentinfo">
+            <div id="footer" class="footer-content inside">
+                <div class="fl mll">
+                    <ul class="footer-links">
+                        <li><a href="/appliformation-js/planAppli"
+                               title="Plan de l&#x27;application l&#x27; <%=messages.applicationTitle%>">Plan de l&#x27;application</a>
+                        </li>
+                        <li><a href="/appliformation-js/politiqueAccessibilite"
+                               title="Politique d&#x27;accessibilité de l&#x27; <%=messages.applicationTitle%>">Accessibilité</a>
+                        </li>
+                        <li><a href="/appliformation-js/contact"
+                               title="Contact de l&#x27; <%=messages.applicationTitle%>">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fr mrl"><p><%=messages.applicationTitle%> - <%= project.version %></p></div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script lang="javascript">
+    changeLink("a");
+
+    let imgs = document.getElementsByTagName("img");
+    
+    for(let i = 0; i < imgs.length; i++) {
+        let img = imgs.item(i);
+        if (img.attributes && img.attributes.src && img.attributes.src.nodeValue.indexOf("/") == 0) {
+            img.src = url + img.attributes.src.nodeValue;
+        }
+    }
+</script>
+</body>
+</html>
