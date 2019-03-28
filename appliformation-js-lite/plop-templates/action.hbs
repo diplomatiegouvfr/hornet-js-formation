@@ -1,0 +1,21 @@
+import { Utils } from "hornet-js-utils";
+import { Logger } from "hornet-js-utils/src/logger";
+import { RouteActionService } from "hornet-js-core/src/routes/abstract-routes";
+{{#if createServiceClass}}
+import { {{sevicePageClass}} } from "src/services/data/{{serviceDirectory}}{{creatPathService}}/{{snakeCase seviceDataClass}}";
+{{else}}
+import { {{sevicePageClass}} } from "src/services/data/{{unixPathCase serviceFile}}";
+{{/if}}
+
+const logger: Logger = Utils.getLogger("{{> applicationName }}.actions{{packageCase actionDirectory}}{{packageCase creatPathAction}}.{{snakeCase actionClass}}");
+
+/**
+ * {{actionClassDescription}}
+ */
+export class {{camelCase actionClass}} extends RouteActionService<any, {{seviceDataClass}}> {
+    execute(): Promise<any> {
+        logger.trace("ACTION {{camelCase actionClass}} - Appel API : {{camelCase actionClass}}.methode_du_service");
+        return this.getService().methode_du_service();
+    }
+}
+

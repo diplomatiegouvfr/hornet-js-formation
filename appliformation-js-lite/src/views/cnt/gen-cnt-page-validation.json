@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "Contact",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "nom": {
+      "description": "Nom expéditeur",
+      "type": "string",
+      "maxLength": 50,
+      "required": true
+    },
+    "prenom": {
+      "description": "Prénom expéditeur",
+      "type": "string",
+      "maxLength": 50,
+      "required": true
+    },
+    "mail": {
+      "description": "Mail expéditeur",
+      "type": "string",
+      "format": "email",
+      "required": true
+    },
+    "message": {
+      "description": "message expéditeur",
+      "type": "string",
+      "maxLength": 50000,
+      "required": true
+    }
+  }
+}

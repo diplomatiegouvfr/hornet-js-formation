@@ -1,0 +1,17 @@
+[Service]
+WorkingDirectory=/var/lib/nodejs/#{INSTANCE_NAME}
+ExecStartPre=/bin/echo "Demarrage de l'application #{INSTANCE_NAME}"
+ExecStartPre=/bin/bash -c "/bin/tar -zcf /var/log/nodejs/#{INSTANCE_NAME}/log-gc-#{INSTANCE}-$$(date +%%Y-%%m-%%d_%%H%%M%%S).tar.gz -C /var/log/nodejs/#{INSTANCE_NAME} log-gc-#{INSTANCE}.log --remove-files --ignore-failed-read"
+ExecStart=/bin/bash -c "#{NODE_BIN_DIR}/node --harmony --stack-size=1024 --trace_gc --trace_gc_verbose index.js > /var/log/nodejs/#{INSTANCE_NAME}/log-gc-#{INSTANCE}.log 2>&1"
+ExecStopPost=/bin/echo "Arret de l'application #{INSTANCE_NAME}"
+Restart=no
+StandardOutput=inherit
+StandardError=inherit
+SyslogIdentifier=#{INSTANCE_NAME}
+User=nodejs
+Group=nodejs
+EnvironmentFile=/etc/nodejs/#{INSTANCE_NAME}/environnement
+Environment='NODE_APP_INSTANCE=#{INSTANCE}'
+ 
+[Install]
+WantedBy=multi-user.target 
