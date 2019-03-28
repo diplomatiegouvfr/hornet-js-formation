@@ -1,0 +1,8 @@
+<p>Bonjour,</p>
+<p>L'utilisateur $prenom $nom souhaite vous contacter. 
+Voici le contenu de sa demande :</p>
+  <blockquote><i>
+    $corps
+  </i></blockquote>
+<p>Envoyé le : $date<br/>
+Par : <a href="$applicationUrl">$applicationName</a></p>

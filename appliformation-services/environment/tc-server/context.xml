@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Context useHttpOnly="true">
+    <Environment name="conf/appliformation-servicesprop" value="${param.dev.path}" type="java.lang.String" />
+</Context>
