@@ -4,7 +4,7 @@
 Avant de procéder à l'installation, vérifier que si le jdk est déjà installé sur le poste
 
 `
-java --version
+java -version
 `
 Si la version 1.8.x n'est pas installée, procéder à son installation :
 
@@ -13,13 +13,13 @@ apt-get install openjdk-8-jdk
 `
 
 ## Installation de tomcat
-La version de Tomcat utilisée dans la v5.2.0 du framework est la 8.5 :
-- Télécharger cette version depuis le site [apache mediamirrors]: https://apache.mediamirrors.org/tomcat/tomcat-8/v8.5.33/bin/
+La version de Tomcat utilisée dans la v5.3.0 du framework est la 8.5 :
+- Télécharger cette version depuis le site [archive apache]: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.33/bin/
 - Dézipper le contenu dans un répertoire par exemple Dev/tools
 
 ## Installation de maven
 
-La version de maven utilisée dans la v5.2.0 du framework est la 3.3.9 :
+La version de maven utilisée dans la v5.3.0 du framework est la 3.3.9 :
 - Télécharger cette version depuis le site [apache]: http://apache.mirrors.ovh.net/ftp.apache.org/dist/maven/maven-3/3.3.9/binaries/
 - Dézipper le contenu dans un répertoire par exemple Dev/tools
 
