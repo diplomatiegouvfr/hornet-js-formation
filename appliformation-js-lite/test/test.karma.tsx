@@ -73,7 +73,7 @@
  * applitutoriel-js-lite - Application tutoriel utilisant le Framework hornet
  *
  * @author MEAE - Ministère de l'Europe et des Affaires étrangères
- * @version v5.2.1
+ * @version v5.3.0
  * @link git+https://github.com/diplomatiegouvfr/applitutoriel-modules.git
  * @license CECILL-2.1
  */
@@ -82,7 +82,6 @@ import { Decorators } from "hornet-js-test/src/decorators";
 import { runTest } from "hornet-js-test/src/test-run";
 import { HornetTestAssert } from "hornet-js-test/src/hornet-test-assert";
 import { BaseTest } from "hornet-js-test/src/base-test";
-import * as React from "react";
 
 @Decorators.describe("Test Karma")
 class KarmaTest extends BaseTest {

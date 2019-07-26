@@ -20,13 +20,13 @@ import { Column } from 'hornet-js-react-components/src/widget/table/column';
 import { Header } from 'hornet-js-react-components/src/widget/table/header';
 import { AuthUtils } from 'hornet-js-utils/src/authentication-utils';
 import { Roles } from 'src/utils/roles';
-import { Picto } from 'hornet-js-react-components/src/img/picto';
 import { ActionColumn } from 'hornet-js-react-components/src/widget/table/column/action-column';
 import { Notifications, NotificationType, NotificationManager } from 'hornet-js-core/src/notification/notification-manager';
 import { Notification } from 'hornet-js-react-components/src/widget/notification/notification';
 import { MenuActions } from 'hornet-js-react-components/src/widget/table/menu-actions';
 import { ActionButton } from 'hornet-js-react-components/src/widget/table/action-button';
 import { Modal } from 'hornet-js-react-components/src/widget/dialog/modal';
+import { SvgSprites } from "hornet-js-react-components/src/widget/icon/svg-sprites";
 
 
 export class RecherchePersonneForm extends HornetPage<PersonneService, HornetPageProps, any> {
@@ -162,7 +162,7 @@ export class RecherchePersonneForm extends HornetPage<PersonneService, HornetPag
                     <Header title={intlTab.summary}>
                         <MenuActions>
                             <ActionButton title={intlTab.ajouter}
-                                srcImg={Picto.white.add}
+                                srcImg={<SvgSprites icon="add" height="1.5em" width="1.5em" color="#FFF" tabIndex={-1} />}
                                 action={this.ajouterPersonne} priority={true} displayedWithoutResult={true} disabled={!this.isAdmin()}/>
                         </MenuActions>
                     </Header>
@@ -174,12 +174,11 @@ export class RecherchePersonneForm extends HornetPage<PersonneService, HornetPag
                             <Column keyColumn="age" title={intlTab.colonnes.age} sortable={true} />
                             <ActionColumn keyColumn="supprimer"
                                 alt={intlTab.colonnes.suppressionTitle}
-                                srcImg={Picto.blue.supprimer}
+                                srcImg={<SvgSprites icon="delete" height="1.5em" width="1.5em" color="#0579be" tabIndex={-1} />}
                                 action={this.supprimer}
                                 messageAlert={intlTab.colonnes.supprimer.message}
                                 titleAlert={intlTab.colonnes.supprimer.title}
                                 disabled={() => !this.isAdmin()}
-                                hasPopUp={true}
                             />
                         </Columns>
                     </Content>

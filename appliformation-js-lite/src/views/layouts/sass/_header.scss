@@ -1,0 +1,24 @@
+@import "hornet-js-react-components/src/widget/sass/core";
+
+/// Couleurs propres au composant
+$headerBg: theme-color($variant: 'secondary');
+$headerBaseColor: theme-color('global', 'white');
+$headerSubLinkHover: theme-color($variant: 'states');
+$headerBannerBoxShadow: rgba(0, 0, 0, 0.55);
+$headerBannerBg: theme-color($variant: 'primary');
+
+#header-container {
+
+    #banner {
+        position: absolute;
+        top: 2.188em;
+        left: 0;
+        right: 0;
+        height: 4em;
+        box-shadow: 0 0.1em 0.3em $headerBannerBoxShadow;
+        background: url("../img/headerAppliTuto.png") $headerBannerBg no-repeat scroll 0 0;
+        
+        @include smoothTransition(top, 0.3s);
+    }
+
+}

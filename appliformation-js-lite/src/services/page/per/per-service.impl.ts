@@ -1,5 +1,5 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import { ServicePage } from "hornet-js-core/src/services/service-page";
 import { PersonneService, Personne } from "src/services/page/per/per-service";
 import { URL_PERSONNE } from '../../../utils/urls';

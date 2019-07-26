@@ -10,7 +10,7 @@ export interface PersonneAttributes extends HornetSequelizeAttributes {
     description: string;
 }
 
-export let PersonneModel: Sequelize.DefineAttributes = {
+export let PersonneModel: Sequelize.ModelAttributes = {
     id: {
         type: Sequelize.INTEGER,
         field: "id_personne",

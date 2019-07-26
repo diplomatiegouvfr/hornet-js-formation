@@ -1,5 +1,5 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import { UtilisateurAttributes, UtilisateurModel } from "src/models/seq-user-mod";
 import { RoleAttributes, RoleModel } from "src/models/model-role";
 import { RoleUtilisateurAttributes, RoleUtilisateurModel } from "src/models/model-role_utilisateur";
@@ -11,7 +11,7 @@ import { inject } from "hornet-js-core/src/inject/inject";
 import { HornetSequelizeInstanceModel } from "hornet-js-database/src/sequelize/hornet-sequelize-attributes";
 import { PersonneModel, PersonneAttributes } from "src/models/seq-per.mod";
 
-const logger: Logger = Utils.getLogger("appliformation-js-lite.src.dao.model-dao");
+const logger: Logger = Logger.getLogger("appliformation-js-lite.src.dao.model-dao");
 
 @injectable(ModelDAO, Scope.SINGLETON, Side.SERVER)
 export class ModelDAO extends HornetSequelizeModel {

@@ -6,7 +6,7 @@ export interface RoleAttributes extends HornetSequelizeAttributes {
     rolNom: string;
 }
 
-export let RoleModel: Sequelize.DefineAttributes = {
+export let RoleModel: Sequelize.ModelAttributes = {
     "idRole": {
         type: Sequelize.INTEGER,
         field: "id_role",

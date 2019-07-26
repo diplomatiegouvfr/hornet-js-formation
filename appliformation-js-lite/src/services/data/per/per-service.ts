@@ -1,4 +1,5 @@
 import { ServiceSecure } from "hornet-js-core/src/services/service-secure";
+import { Promise } from "hornet-js-utils/src/promise-api";
 
 /**
  * Interface des services de manipulation des personnes
