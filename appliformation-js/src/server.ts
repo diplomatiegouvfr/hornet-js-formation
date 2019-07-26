@@ -1,6 +1,6 @@
 // L'import de hornet-js-utils doit être fait le plus tôt possible
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import * as fs from "fs";
 import { I18nLoader } from "hornet-js-core/src/i18n/i18n-loader"
 import { ServerConfiguration } from "hornet-js-core/src/server-conf";
@@ -27,7 +27,7 @@ async function initContext() {
 
 let AuthenticationAPIMiddleware;
 
-const logger: Logger = Utils.getLogger("appliformation-js.server");
+const logger: Logger = Logger.getLogger("appli.server");
 
 export class Server {
 

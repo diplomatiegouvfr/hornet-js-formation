@@ -1,5 +1,5 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 
 /**
  * Liste des utilisateurs en mode bouchon

@@ -3,9 +3,7 @@
     "appname": "appliformation js",
     "appversion": "1.0.0",
     "appdescription": "appliformation-js",
-    "fmkversion": "5.2.1",
-    "theme": "hornet-themes-intranet",
-    "themeversion": "5.2.1",
+    "fmkversion": "5.4.1",
     "hostservice": "http://localhost:8080",
     "urlservice": "appliformation-services",
     "fullspa": false

@@ -1,10 +1,10 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import { AuthService } from "src/services/data/auth/auth-service";
 import { Response } from "superagent";
 import { Promise } from "hornet-js-utils/src/promise-api";
 
-const logger: Logger = Utils.getLogger("appliformation-js.mock.services.data.auth.auth-service-data-mock-impl");
+const logger: Logger = Logger.getLogger("appliformation-js.mock.services.data.auth.auth-service-data-mock-impl");
 
 /**
  * Liste des utilisateurs en mode bouchon

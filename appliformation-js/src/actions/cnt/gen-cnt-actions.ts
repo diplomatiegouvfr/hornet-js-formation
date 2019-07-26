@@ -1,9 +1,9 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import { RouteActionService } from "hornet-js-core/src/routes/abstract-routes";
 import { ContactService } from "src/services/page/cnt/contact-service-page";
 
-const logger: Logger = Utils.getLogger("appliformation-js.actions.cnt.gen-cnt-actions");
+const logger: Logger = Logger.getLogger("appliformation-js.actions.cnt.gen-cnt-actions");
 
 /**
  * Appel le service distant pour réaliser l"envoi de la demande de contact.

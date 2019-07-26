@@ -1,0 +1,149 @@
+@import "hornet-js-react-components/src/widget/sass/core";
+
+/// Couleurs propres au composant
+$authPrimaryColor: theme-color('global', 'white');
+$authTitleColor: rgba(0, 126, 202, 1); //#007eca
+$authBorderColor: theme-color($variant: 'secondary');
+$authInputBorder: rgba(174, 174, 174, 1); //#aeaeae
+$authOutline: theme-color($variant: 'states');
+$authButtonBg: theme-color($variant: 'secondary');
+
+#auth {
+    overflow: auto;
+    margin: 0;
+    background: url("../img/fond_connexion.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    button,
+    label,
+    input {
+        @media screen and (min-width: #{$media-720}) {
+            font-size: 1em;
+        }
+
+        @media screen and (max-width: #{$media-720}) {
+            font-size: 1.5em;
+        }
+    }
+
+    form {
+        padding: 0.3em 1.5em 1.5em;
+        background: $formBgGlobal;
+        border-radius: 0.313em;
+    }
+
+    #sidebar {
+        color: $authPrimaryColor;
+        font-weight: 600;
+    }
+
+    #site {
+        padding-top: 0;
+    }
+
+    #header {
+        text-align: center;
+        margin: 0 2em;
+    }
+
+    #content {
+        margin: auto;
+        font-size: 1em;
+        font-family: $notoRegular;
+        text-align: center;
+
+        h2 {
+            color: $authTitleColor;
+            border-bottom: 1px solid $authBorderColor;
+            font-family: $notoBold;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        @media screen and (max-width: #{$mediaXS-405}) {
+            margin: 0 1em;
+        }
+
+        @media screen and (min-width: #{$media-720}) {
+            max-width: 22.938em;
+            
+            h2 {
+                font-size: 1em;
+                padding: 0.875em;
+            }
+        }
+
+        @media screen and (max-width: #{$media-720}) {
+            margin: 0 5em;
+            font-size: 1.5em;
+
+            h2 {
+                font-size: 1em;
+                padding: 0.2em;
+            }
+        }
+    }
+
+    .errors {
+        padding: 0.5em 0.5em 0.5em 2.5em;
+        color: $globalErrorColor;
+        border: 1px solid $globalErrorColor;
+        text-align: left;
+        background: url($PATH_IMG + 'icon_error.png') no-repeat 0.118em center;
+        background-size: 1em 1em;
+    }
+
+    #app-name {
+        padding-bottom: 1em;
+        font-size: 1.375em;
+        color: $authPrimaryColor;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        height: 2.188em;
+        box-sizing: border-box;
+        margin: 0 0 1em 0;
+        padding: 0.5em 0.5em 0.5em 1em;
+        appearance: none;
+        border: 1px solid $authInputBorder;
+        line-height: 1.412em;
+
+        &:focus {
+            outline: 1px auto $authOutline;
+        }
+    }
+
+    button {
+        margin: 1em 0;
+        min-width: 100%;
+        min-height: 2.353em;
+        color: $authPrimaryColor;
+        background: $authButtonBg;
+        cursor: pointer;
+        border: medium none;
+        text-transform: uppercase;
+        font-family: $notoBold;
+        font-weight: 600;
+    }
+
+    label {
+        display: block;
+        text-align: left;
+        margin: 0.5em 0;
+        line-height: 1.412em;
+    }
+
+    .cnx-info {
+        font-size: 0.8125em;
+        margin: 0.725em 0 0 0;
+
+        p {
+            &:first-child {
+                font-weight: bold;
+            }
+        }
+    }
+}

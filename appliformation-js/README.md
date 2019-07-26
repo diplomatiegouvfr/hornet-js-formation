@@ -4,7 +4,7 @@
 
 ## Prérequis
 
-* NodeJS 8.X
+* NodeJS 10.X
 * hornet-js-builder installé en global:
 
 ```shell

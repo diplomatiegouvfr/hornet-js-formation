@@ -1,13 +1,16 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import { Client } from "hornet-js-core/src/client";
 import { Routes } from "src/routes/routes";
 import { HornetApp } from "src/views/layouts/hornet-app";
 import { ErrorPage } from "hornet-js-react-components/src/widget/component/error-page";
 import { ReactClientInitializer } from "hornet-js-react-components/src/react/react-client";
 
+let context = require["context"]("hornet-js-react-components/src/widget/component/fonts", true, /\.ttf$/);
+context.keys().forEach(context);
+
 (function startClient() {
-    const logger: Logger = Utils.getLogger("appliformation-js.client");
+    const logger: Logger = Logger.getLogger("appli.client");
 
     function routeLoader(name: string, callback: any) {
         logger.trace("routeLoaderClient(" + name + ")");
@@ -35,7 +38,7 @@ import { ReactClientInitializer } from "hornet-js-react-components/src/react/rea
             },
             onbeforeunload:function() {
                 logger.trace(Utils.getCls("hornet.navigateData"));
-                if(Utils.getCls("hornet.navigateData") && !_.isUndefined(Utils.getCls("hornet.navigateData"))) {
+                if(Utils.getCls("hornet.navigateData")) {
                     window.localStorage.setItem("hornet.navigateData", JSON.stringify(Utils.getCls("hornet.navigateData")));
                 }
             },

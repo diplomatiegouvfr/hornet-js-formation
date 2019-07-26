@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import { HornetPage } from "hornet-js-react-components/src/widget/component/hornet-page";
 import { HornetComponentProps } from "hornet-js-components/src/component/ihornet-component";
 import { Plan } from "hornet-js-react-components/src/widget/navigation/plan";
 
-const logger: Logger = Utils.getLogger("appliformation-js.views.nav.nav-pap-page");
+const logger: Logger = Logger.getLogger("appliformation-js.views.nav.nav-pap-page");
 
 /**
  * Ecran du plan de l'application

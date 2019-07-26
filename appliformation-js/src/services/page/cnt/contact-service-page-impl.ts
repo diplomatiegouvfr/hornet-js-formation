@@ -1,10 +1,10 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import { ServiceRequest } from "hornet-js-core/src/services/service-request";
 import { URL_CONTACT, URL_CONTACT_ENVOYER } from "src/utils/urls";
 import {ContactService} from "src/services/page/cnt/contact-service-page";
 
-const logger: Logger = Utils.getLogger("appliformation-js.services.page.cnt.contact-service-page-impl");
+const logger: Logger = Logger.getLogger("appliformation-js.services.page.cnt.contact-service-page-impl");
 
 /**
  * Implementation des services pour les contacts

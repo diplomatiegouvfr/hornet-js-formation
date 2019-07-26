@@ -12,6 +12,7 @@
       "type": "dateFile",
       "pattern": ".yyyy-MM-dd",
       "filename": "log/appli.log", //DEV
+      //"filename": "/var/log/nodejs/appli/appli.log", //PROD
       "layout": {
         "type": "pattern",
         "pattern": "%d{ISO8601}|%x{tid}|%x{user}|%p|%c|%x{fn}|%m"
