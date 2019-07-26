@@ -6,8 +6,9 @@ import { PlanAppliPage } from "src/views/nav/nav-pap-page";
 import { AccessibilitePage } from "src/views/gen/gen-acb-page";
 import { Utils } from "hornet-js-utils";
 import { DeclarationconformitePage } from "src/views/gen/gen-ddc-page";
-import {Logger} from "hornet-js-utils/src/logger";
-const logger: Logger = Utils.getLogger("appliformation-js-lite.routes.routes");
+import {Logger} from "hornet-js-logger/src/logger";
+
+const logger: Logger = Logger.getLogger("appliformation-js-lite.routes.routes");
 
 export class Routes extends AbstractRoutes {
 

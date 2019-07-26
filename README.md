@@ -14,7 +14,7 @@ Aperçu :
 ![Aperçu](./sources/capture.png)
 
 ## Astuce
-- Utiliser le squelette généré à partir de [la correction de l'exercice 1](https://gitlab01.devng.diplomatie.gouv.fr/gitlab/hornet.js/hornet-js-formation/tree/exercice_1_vue_et_route_lite)
+- Utiliser le squelette généré à partir de [la correction de l'exercice 1](https://github.com/diplomatiegouvfr/hornet-js-formation/tree/exercice_1_vue_et_route_lite)
 - Créer dans la dossier `src/services/page` un dossier `per`
 - Dans le dossier `src/services/page/per`, créer le fichier `per-service.ts` qui contient l'interface du service personne
 

@@ -1,7 +1,8 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import { ServicePage } from "hornet-js-core/src/services/service-page";
 import { PersonneService, Personne } from "src/services/page/per/per-service";
+import { Promise } from "hornet-js-utils/src/promise-api";
 
 
 // mock à retourner à la vue
