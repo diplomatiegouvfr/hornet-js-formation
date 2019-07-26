@@ -1,11 +1,11 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import { UtilisateursDAO } from "src/dao/utilisateurs-dao";
 import { UtilisateurMetier } from "src/models/user-mod";
 import { AuthService } from "src/services/data/auth/auth-service";
 import { Response } from "superagent";
 
-const logger:Logger = Utils.getLogger("appliformation-js-lite.src.services.data.auth.auth-service-data-impl");
+const logger:Logger = Logger.getLogger("appliformation-js-lite.src.services.data.auth.auth-service-data-impl");
 
 export class AuthServiceImpl extends AuthService {
     private utilisateursDAO: UtilisateursDAO = new UtilisateursDAO();

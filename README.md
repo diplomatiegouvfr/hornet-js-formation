@@ -12,7 +12,7 @@ npm install -g generator-hornet-js-lite
 
 pensez aux liens symboliques :
 ```
-ln -s /home/myuser/.npm-global/bin/yo
+ln -s $HOME/.npm-global/bin/yo
 ```
 Se positionner dans le workspace dans lequel sera généré le projet :
 
@@ -25,6 +25,4 @@ yo hornet-js-lite
 - Nom de votre projet : appliformation-js-lite
 - Version de votre projet (1.0.0 par défaut) : 1.0.0
 - Description de votre projet : application hornet-js-lite de formation
-- Version du framework (hornet-js-lite) : 5.2.3
-- Thême de l'application : hornet-themes-intranet
-- Version du thême de l'application : 5.2.3
+- Version du framework (hornet-js-lite) : 5.4.1

@@ -62,7 +62,6 @@
     "httpOnly": true,
     "secure": true
   },
-  "themeName": "hornet-themes-intranet",
   "security": {
     "enabled": true,
     "hpp": true,
@@ -218,22 +217,23 @@
   },
   "authentication": {
     "loginUrl": "/login",
-    "logoutUrl": "/logout"
-    //    "saml": {
-    //      "enabled": false,
-    //      "configuration": {
-    //        "hostUrlReturnTo": "http://localhost:8889",
-    //        "callbackUrl": "/login",
-    //        "logoutCallbackUrl": "/logout",
-    //        "issuer": "http://localhost:8889/appliformation-js-lite",
-    //        "idp": [
-    //          {
-    //            "name": "idp",
-    //            "shibbolethUrl": "./config/idp/arobas/idp-metadata.xml",
-    //            "httpsCert": "./config/cert/arobas/arobas.dev.diplomatie.gouv.fr"
-    //          }
-    //        ]
-    //      }
+    "logoutUrl": "/logout" /*,
+    "saml": {
+      "enabled": false,
+      "configuration": {
+        "hostUrlReturnTo": "http://localhost:8889",
+        "callbackUrl": "/login",
+        "logoutCallbackUrl": "/logout",
+        "issuer": "http://localhost:8889/appliformation-js-lite",
+        "idp": [
+          {
+            "name": "idp",
+            "shibbolethUrl": "./config/idp/arobas/idp-metadata.xml",
+            "httpsCert": "./config/cert/arobas/arobas.dev.diplomatie.gouv.fr"
+          }
+        ]
+      }
+    }*/
   },
   "request": {
     "cache": {

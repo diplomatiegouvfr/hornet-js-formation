@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import { HornetComponentProps } from "hornet-js-components/src/component/ihornet-component";
 import { HornetComponent } from "hornet-js-react-components/src/widget/component/hornet-component";
 import * as _ from "lodash";
 
-const logger: Logger = Utils.getLogger("appliformation-js-lite.views.gen.gen-cnx-page");
+const logger: Logger = Logger.getLogger("appliformation-js-lite.views.gen.gen-cnx-page");
 
 export interface ConnexionPageProps extends HornetComponentProps {
     errorMessage?: any,
@@ -27,17 +27,14 @@ export class ConnexionPage extends HornetComponent<ConnexionPageProps,any> {
      */
     render(): JSX.Element {
         logger.info("VIEW ConnexionPage render");
-
-        let fwkTheme: string = process.env.NODE_ENV === "production" ? "/css/theme-min.css" : "/css/theme.css";
-
+        
         return (
             <html lang='fr'>
             <head>
                 <title>{this.i18n("authPage.title")}</title>
                 <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8"/>
                 <link rel="icon" type="image/png" href={this.genUrlStatic("/img/logoHornet.png")}/>
-                <link rel="stylesheet" type="text/css" href={ConnexionPage.genUrlTheme(fwkTheme)}/>
-                <link rel='stylesheet' type='text/css' href={this.genUrlStatic("/css/auth.css")}/>
+                <link rel='stylesheet' type='text/css' href={this.genUrlStatic("/css/appli.min.css")}/>
             </head>
             <body id="auth">
             <div id="site">

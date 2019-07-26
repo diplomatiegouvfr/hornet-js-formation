@@ -1,5 +1,5 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import Map from "hornet-js-bean/src/decorators/Map";
 import { injectable } from "hornet-js-core/src/inject/injectable";
 import { inject } from "hornet-js-core/src/inject/inject";
@@ -9,7 +9,7 @@ import { UtilisateurMetier } from "src/models/user-mod";
 import { ModelDAO } from "src/dao/model-dao";
 import { UtilisateurAttributes } from "src/models/seq-user-mod";
 
-const logger: Logger = Utils.getLogger("appliformation-js-lite.src.dao.utilisateurs-dao");
+const logger: Logger = Logger.getLogger("appliformation-js-lite.src.dao.utilisateurs-dao");
 
 @injectable()
 export class UtilisateursDAO extends HornetGenericDAO<ModelDAO, HornetSequelizeInstanceModel<UtilisateurAttributes>> {

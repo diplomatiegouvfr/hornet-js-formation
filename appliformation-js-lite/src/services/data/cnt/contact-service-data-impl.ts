@@ -1,12 +1,12 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import { ServiceRequest } from "hornet-js-core/src/services/service-request";
 import { Mailer, NodeMailerMessage } from "hornet-js-core/src/mail/mailer";
 import { ContactService } from "src/services/page/cnt/contact-service-page";
 import { Template } from "hornet-js-utils/src/template";
 import { HornetComponent } from "hornet-js-react-components/src/widget/component/hornet-component";
 
-const logger: Logger = Utils.getLogger("appliformation-js-lite.services.data.cnt.contact-service-data-impl");
+const logger: Logger = Logger.getLogger("appliformation-js-lite.services.data.cnt.contact-service-data-impl");
 
 /**
  * Implementation des services pour les contacts
