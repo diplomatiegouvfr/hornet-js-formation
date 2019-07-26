@@ -1,6 +1,6 @@
 // L'import de hornet-js-utils doit être fait le plus tôt possible
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import * as fs from "fs";
 import { AppliI18nLoader } from "src/i18n/app-i18n-loader";
 import { ServerConfiguration } from "hornet-js-core/src/server-conf";
@@ -34,7 +34,7 @@ import { Injector } from "hornet-js-core/src/inject/injector";
 
 import * as Menu from "src/resources/navigation.json";
 // Mise en place des injections de service
-const logger: Logger = Utils.getLogger("hornet-themes-intranet.server");
+const logger: Logger = Logger.getLogger("appliformation-js-lite.server");
 
 async function initContext() {
     await import("src/injector-context-services-data");

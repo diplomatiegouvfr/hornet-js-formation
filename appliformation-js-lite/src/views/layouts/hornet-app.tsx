@@ -1,5 +1,5 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 import * as React from "react";
 import { Class } from "hornet-js-utils/src/typescript-utils";
 import { HornetPage, HornetPageProps } from "hornet-js-react-components/src/widget/component/hornet-page";
@@ -12,19 +12,17 @@ import { User } from "hornet-js-react-components/src/widget/user/user";
 import { Menu } from "hornet-js-react-components/src/widget/navigation/menu";
 import { LayoutSwitcher } from "hornet-js-react-components/src/widget/screen/layout-switcher";
 import { ChangeLanguage } from "hornet-js-react-components/src/widget/language/change-language";
-import { Dropdown, Position } from "hornet-js-react-components/src/widget/dropdown/dropdown";
+import { Position } from "hornet-js-react-components/src/widget/dropdown/dropdown";
 import * as ChangeLanguageService from "hornet-js-core/src/services/default/change-language";
-import { NavigationUtils } from "hornet-js-components/src/utils/navigation-utils";
 import { NotificationSessionFooter } from "hornet-js-react-components/src/widget/notification/notification-session-footer";
 import { MenuAccessibilite } from "hornet-js-react-components/src/widget/navigation/menu-accessibilite";
-
-
-import * as _ from "lodash";
+import concat = require("lodash.concat");
 import * as classNames from "classnames";
 
-const logger: Logger = Utils.getLogger("appliformation-js-lite.views.layouts.hornet-app");
+import "hornet-js-react-components/src/widget/sass/gen.scss";
+import "src/views/layouts/sass/_auth.scss";
 
-
+const logger: Logger = Logger.getLogger("appliformation-js.views.layouts.hornet-app");
 
 export interface HornetAppProps extends HornetPageProps, HornetComponentProps {
     componentContext: any;
@@ -78,7 +76,7 @@ export class HornetApp extends HornetPage<any, HornetAppProps, any> {
     render(): JSX.Element {
         logger.trace("VIEW HornetApp render");
 
-        let title = _.concat(this.i18n("header").logoTitle, this.state.applicationTitle).join(" ");
+        let title = concat(this.i18n("header").logoTitle, this.state.applicationTitle).join(" ");
 
         let classes: any = {
             "mode-fullscreen": this.state.modeFullscreen
@@ -91,37 +89,18 @@ export class HornetApp extends HornetPage<any, HornetAppProps, any> {
         let lienAide = (this.state.linkHelpVisible) ?
             <li><a title={messIntl.help + applicationTitle} href={this.genUrl("/aide")}>{messIntl.help}</a></li>
             : null;
-        let lang = <ChangeLanguage handleChangeLanguage={this.handleChangeLanguage} position={Position.BOTTOMRIGHT} />;
-        let user = Utils.config.getOrDefault("fullSpa.enabled", false) && Utils.config.getOrDefault("mock.enabled", false) ? <Dropdown
-            items={[ { label: "as Admin", action: this.changeUserTo, valueCurrent: "admin", className: "link" },
-            { label: "As User", action: this.changeUserTo, valueCurrent: "user", className: "link" }]}
-            title={"mock users"}
-            icon="picto-user"
-            className="profil-content"
-            id={"dropdown-user-mock" + "-drop"}
-            label={"Users"}
-            labelClassName={"profil-label"}
-            position={Position.BOTTOMRIGHT}
-        /> : <User />;
-        let langBanner = <ChangeLanguage id="Change-Language-banner" handleChangeLanguage={this.handleChangeLanguage} position={Position.BOTTOMRIGHT} />;
-        let userBanner = Utils.config.getOrDefault("fullSpa.enabled", false) && Utils.config.getOrDefault("mock.enabled", false) ? <Dropdown
-            items={[ { label: "as Admin", action: this.changeUserTo, valueCurrent: "admin", className: "link" },
-            { label: "As User", action: this.changeUserTo, valueCurrent: "user", className: "link" }]}
-            title={"mock users"}
-            icon="picto-user"
-            className="profil-content"
-            id={"dropdown-user-banner-mock" + "-drop"}
-            label={"Users"}
-            labelClassName={"profil-label"}
-            position={Position.BOTTOMRIGHT}
-        /> : <User id="user-banner" />;
+        let lang = <ChangeLanguage handleChangeLanguage={this.handleChangeLanguage} position={Position.BOTTOMRIGHT}/>;
+        let user = <User/>;
+        let langBanner = <ChangeLanguage id="Change-Language-banner" handleChangeLanguage={this.handleChangeLanguage}
+                                         position={Position.BOTTOMRIGHT}/>;
+        let userBanner = <User id="user-banner"/>;
 
         // todo add to banner
         let wrappedUserLang = (
             <div className="userlang fr full-height">
                 {userBanner}
                 {langBanner}
-                <LayoutSwitcher />
+                <LayoutSwitcher/>
             </div>
         );
 
@@ -131,63 +110,63 @@ export class HornetApp extends HornetPage<any, HornetAppProps, any> {
                     <div id="header">
                         <MenuAccessibilite/>
                         <div id="header-expanded-zone" className={"inside " + this.state.classNameExpanded}
-                            style={{ maxWidth: this.state.currentWorkingZoneWidth }}>
+                             style={{maxWidth: this.state.currentWorkingZoneWidth}}>
                             <div className="fl full-height">
                                 <a className="header-link"
-                                    title={this.i18n("application.headerTitleText")}
-                                    href={this.state.headerTitleUrl}>{this.i18n("application.headerTitle")}</a>
+                                   title={this.i18n("application.headerTitleText")}
+                                   href={this.state.headerTitleUrl}>{this.i18n("application.headerTitle")}</a>
                             </div>
-                            <div className="fr full-height user" style={{ display: "inline-flex" }}>
+                            <div className="fr full-height user" style={{display: "inline-flex"}}>
                                 {user}
                                 {lang}
-                                <LayoutSwitcher />
+                                <LayoutSwitcher/>
                             </div>
                         </div>
                     </div>
                     <div id="banner">
                         <div id="banner-expanded-zone"
                              className={"inside " + this.state.classNameExpanded}
-                             style={{ maxWidth: this.state.currentWorkingZoneWidth }}>
+                             style={{maxWidth: this.state.currentWorkingZoneWidth}}>
                             <div className="fl menu-main-conteneur ">
                                 <Menu showIconInfo={true} workingZoneWidth={this.state.currentWorkingZoneWidth}
-                                    var={(menu: any) => {
-                                        return this.menu = menu;
-                                    }} />
+                                      var={(menu: any) => {
+                                          return this.menu = menu;
+                                      }}/>
                             </div>
                             <div className="fl mls">
                                 <a className="sub-header-link"
-                                    href={this.genUrl(Utils.config.getOrDefault("welcomePage", "/"))} title={title}
-                                    id="img-logo">
-                                    <img src={this.state.logoUrl} alt={this.i18n("applicationTitle")} />
+                                   href={this.genUrl(Utils.config.getOrDefault("welcomePage", "/"))} title={title}
+                                   id="img-logo">
+                                    <img src={this.state.logoUrl} alt={this.i18n("applicationTitle")}/>
                                 </a>
                             </div>
                             <div className="fl mls">
                                 <a className="sub-header-link"
-                                    href={this.genUrl(Utils.config.getOrDefault("welcomePage", "/"))} title={title}>
+                                   href={this.genUrl(Utils.config.getOrDefault("welcomePage", "/"))} title={title}>
                                     <h1 id="app-title">{this.i18n("applicationTitle")}</h1>
                                 </a>
                             </div>
                             {wrappedUserLang}
                         </div>
-                        <Spinner />
+                        <Spinner/>
                     </div>
                 </HeaderPage>
                 <HornetContent content={this.state.content} workingZoneWidth={this.state.workingZoneWidth}
-                    error={this.state.error} />
-                <NotificationSessionFooter />
+                               error={this.state.error}/>
+                <NotificationSessionFooter/>
                 <FooterPage workingZoneWidth={this.state.currentWorkingZoneWidth}>
                     <div className="fl mll">
                         <ul className="footer-links">
                             <li>
                                 <a href={this.genUrl("/planAppli")}
-                                    title={messIntl.planTitle + applicationTitle}>{messIntl.plan}</a>
+                                   title={messIntl.planTitle + applicationTitle}>{messIntl.plan}</a>
                             </li>
                             <li>
                                 <a href={this.genUrl("/politiqueAccessibilite")}
-                                    title={messIntl.accessTitle + applicationTitle}>{messIntl.access}</a>
+                                   title={messIntl.accessTitle + applicationTitle}>{messIntl.access}</a>
                             </li>
                             <li><a href={this.genUrl("/contact")}
-                                title={messIntl.contactTitle + applicationTitle}>{messIntl.contact}</a>
+                                   title={messIntl.contactTitle + applicationTitle}>{messIntl.contact}</a>
                             </li>
                             {lienAide}
                         </ul>
@@ -215,7 +194,7 @@ export class HornetApp extends HornetPage<any, HornetAppProps, any> {
      */
     private handleChangeLanguage(i18nLocale: string) {
 
-        this.service.changeLanguage({ "hornetI18n": i18nLocale }).then((retourApi) => {
+        this.service.changeLanguage({"hornetI18n": i18nLocale}).then((retourApi) => {
             logger.trace("Retour API PartenaireApi.rechercher :", retourApi.body);
             Utils.setCls("hornet.internationalization", retourApi.body);
             window.location.reload();
@@ -228,23 +207,10 @@ export class HornetApp extends HornetPage<any, HornetAppProps, any> {
      */
     private handleWakeUpNode(i18nLocale: string) {
 
-        this.service.changeLanguage({ "hornetI18n": i18nLocale }).then((retourApi) => {
+        this.service.changeLanguage({"hornetI18n": i18nLocale}).then((retourApi) => {
             logger.trace("Retour service changeLanguage :", retourApi.body);
             Utils.setCls("hornet.internationalization", retourApi.body);
             window.location.reload();
-        });
-    }
-
-    /**
-     *
-     * @param value valeur sélectionnée dans la liste des users mocké
-     */
-    private changeUserTo(value) {
-        this.navigateTo("accueil", {}, () => {
-            this.forceUpdate();
-            this.menu.forceUpdate();
-            this.menu.setState({ items: this.menu.props.configMenu ? NavigationUtils.getFilteredConfigNavigation(_.cloneDeep(this.menu.props.configMenu), this.user) : NavigationUtils.getFilteredConfigNavigation(NavigationUtils.getConfigMenu(), Utils.getCls("hornet.user")) });
-
         });
     }
 }

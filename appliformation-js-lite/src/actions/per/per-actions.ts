@@ -1,5 +1,6 @@
 import { RouteActionService } from 'hornet-js-core/src/routes/abstract-routes';
 import { PersonneService } from 'src/services/data/per/per-service';
+import { Promise } from "hornet-js-utils/src/promise-api";
 
 export class RechercherPersonneAction extends RouteActionService<any, PersonneService> {
   

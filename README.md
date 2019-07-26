@@ -136,7 +136,7 @@ import { inject } from "hornet-js-core/src/inject/inject";
 import { ModelDAO } from "src/dao/model-dao";
 import { injectable } from "hornet-js-core/src/inject/injectable";
 import { PersonneMetier } from "src/models/per-mod";
-import { PersonneAttributes } from "src/models/seq-per.mod";
+import { PersonneAttributes } from "src/models/seq-per-mod";
 
 var Op = require("sequelize/lib/operators");
 

@@ -3,50 +3,42 @@
   "version": "1.0.0",
   "main": "index.js",
   "description": "appliformation-js-lite",
-  "tsDefinitionDependencies": {
-    "hornet-js-ts-typings": "5.2.3",
-    "hornet-js-utils-dts": "5.2.3",
-    "hornet-js-database-dts": "5.2.3",
-    "hornet-js-bean-dts": "5.2.3",
-    "hornet-js-core-dts": "5.2.3",
-    "hornet-js-components-dts": "5.2.3",
-    "hornet-js-react-components-dts": "5.2.3",
-    "hornet-js-passport-dts": "5.2.3",
-    "hornet-js-test-dts": "5.2.3"
-  },
-  "appDependencies": {
-    "hornet-themes-intranet": "5.2.3",
-    "hornet-js-components": "5.2.3",
-    "hornet-js-react-components": "5.2.3",
-    "hornet-js-database": "5.2.3",
-    "hornet-js-bean": "5.2.3",
-    "hornet-js-core": "5.2.3",
-    "hornet-js-utils": "5.2.3",
-    "hornet-js-passport": "5.2.3",
+  "dependencies": {
+    "hornet-js-bean": "5.4.1",
+    "hornet-js-components": "5.4.1",
+    "hornet-js-core": "5.4.1",
+    "hornet-js-database": "5.4.1",
+    "hornet-js-logger": "5.4.1",
+    "hornet-js-passport": "5.4.1",
+    "hornet-js-react-components": "5.4.1",
+    "hornet-js-utils": "5.4.1",
+    "lodash.clonedeep": "4.5.0",
+    "lodash.concat": "4.5.0",
+    "lodash.startswith": "4.2.1",
     "connect-flash": "0.1.1",
     "passport": "0.2.1",
     "passport-local": "1.0.0",
     "sha1": "1.1.1",
-    "chart.js": "2.6.0",
-    "pg": "6.0.1",
-    "pg-hstore": "2.3.2",
-    "pg-native": "1.10.0",
-    "sqlite3": "3.1.13"
+    "pg": "7.11.0",
+    "sequelize": "5.8.9",
+    "source-map-support": "0.5.12",
+    "tslib": "1.9.3"
   },
-  "buildDependencies": {},
-  "testDependencies": {
-    "hornet-js-test": "5.2.3"
+  "devDependencies": {
+    "@types/lodash.clonedeep": "4.5.6",
+    "@types/lodash.concat": "4.5.6",
+    "@types/lodash.startswith": "4.2.6",
+    "@types/node": "10.14.10",
+    "@types/react": "16.7.22",
+    "hornet-js-test": "5.4.1",
+    "inquirer-directory": "2.1.0",
+    "inquirer-file": "1.0.0",
+    "sqlite3": "4.0.8"
   },
   "scripts": {
     "init-dev": "hb install",
-    "start": "node index.js",
-    "plop": "node ./node_modules/plop"
-  },
-  "devDependencies": {
-    "inquirer-directory": "2.1.0",
-    "inquirer-file": "1.0.0",
-    "plop": "2.0.0"
+    "start": "node index.js"
   },
   "author": "MEAE - Ministère de l'Europe et des Affaires étrangères",
-  "hornetJsBuilder": "1.6.0"
+  "hornetJsBuilder": "2.0.2"
 }

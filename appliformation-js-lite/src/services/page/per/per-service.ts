@@ -2,7 +2,7 @@
  * Interface du service personne
  */
 export interface PersonneService {
-    rechercherPersonnes(data): Promise<any>;
+    rechercherPersonnes(data): Promise<any[]>;
 }
 
 /**

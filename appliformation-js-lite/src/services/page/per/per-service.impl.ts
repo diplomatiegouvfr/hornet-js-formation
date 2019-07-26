@@ -13,7 +13,7 @@ export class PersonneServiceImpl extends ServicePage implements PersonneService 
      * Recherche les personnes repondant aux critères en entrée
      * @param data : critère de recherche
      */
-    rechercherPersonnes(data: any): Promise<any> {
+    rechercherPersonnes(data: any): Promise<any[]> {
         let uri = `/rechercher/${data.nom}/${data.sexe}`;
         if(data.prenom) {
             uri = `${uri}/${data.prenom}`;
