@@ -1,0 +1,339 @@
+{
+  "applicationTitle": "appliformation js lite",
+  "labelLanguage": "Français",
+  "errorsTitle": "Une erreur est survenue",
+  "applicationLoading": "Chargement de l'application, veuillez patienter ...",
+  "topButtonTitle": "Retour vers le haut de la page",
+  "nfePage": {
+    "title": "Cette page n'existe pas",
+    "backToHome": "Retour à la page d'accueil"
+  },
+  "form": {
+    "requiredLabel": "Saisie obligatoire",
+    "valid": "Valider",
+    "validTitle": "Valider la saisie du formulaire",
+    "cancel": "Annuler",
+    "cancelTitle": "Annuler la saisie du formulaire",
+    "reinit": "Réinitialiser",
+    "reinitTitle": "Réinitialiser les champs de saisie du formulaire",
+    "search": "Rechercher",
+    "searchTitle": "Rechercher à partir des données du formulaire",
+    "fillField": "Les champs marqués d'un astérisque (*) doivent être renseignés.",
+    "submitData": "Données soumises:",
+    "checkbox": {
+      "booleanOui": "Oui",
+      "booleanNon": "Non"
+    },
+    "accordion": {
+      "errors": "erreurs",
+      "error": "erreur"
+    },
+    "autoCompleteField": {
+      "title": "Aide à la saisie d'un champ d'auto-completion",
+      "toolTip": "Commencez la saisie et des propositions vous seront faites. Vous pouvez naviguer dans ces propositions à partir des flèches du clavier",
+      "selectedItem": "{count, plural, =0 {aucun item sélectionné } =1 {1 item sélectionné} other {# items sélectionnés}}",
+      "noResultLabel": "pas de résultat."
+    },
+    "validation": {
+      "generic": "La valeur du champ « {field} » est incorrecte.",
+      "multipleOf": "La valeur du champ « {field} » est incorrecte.",
+      "maximum": "La valeur du champ « {field} » est supérieure au maximum autorisé.",
+      "exclusiveMaximum": "La valeur du champ « {field} » est supérieure au maximum autorisé.",
+      "minimum": "La valeur du champ « {field} » est inférieure au minimum requis.",
+      "exclusiveMinimum": "La valeur du champ « {field} » est inférieure au minimum requis.",
+      "maxLength": "Le champ « {field} » excède le nombre maximum de caractères autorisé. Veuillez corriger la saisie de ce champ.",
+      "minLength": "Le nombre de caractères du champ « {field} » est inférieur au minimum requis.",
+      "pattern": "Le format du champ « {field} » est incorrect.",
+      "format": "Le format du champ « {field} » est incorrect.",
+      "additionalItems": "Un ou plusieurs éléments non valides ont été sélectionnés dans le champ « {field} ».",
+      "items": "Un ou plusieurs éléments non valides ont été sélectionnés dans le champ « {field} ».",
+      "maxItems": "Le nombre d'éléments sélectionnés pour le champ « {field} » est supérieur au maximum autorisé.",
+      "minItems": "Le nombre d'éléments sélectionnés pour le champ « {field} » est inférieur au minimum requis.",
+      "uniqueItems": "Le champ « {field} » ne doit pas contenir de doublons.",
+      "enum": "Le champ « {field} » a une propriété dont la valeur n'est pas dans la liste de valeurs autorisées.",
+      "required": "Le champ « {field} » est obligatoire. Veuillez saisir ce champ.",
+      "formatMinimum": "La valeur du champ « {field} » est inférieure au minimum requis.",
+      "formatMaximum": "La valeur du champ « {field} » est supérieure au maximum autorisé.",
+      "switch": "La valeur du champ « {field} » est incorrecte."
+    }
+  },
+  "textarea": {
+    "alertMessage": "Le nombre de caractères renseigné est trop élevé par rapport au nombre maximum ({count}/{maxChar}).",
+    "alertTitle": "Nombre de caractères trop élevé",
+    "charLabel": "{count, plural, =1 {1 caractère} other {# caractères}}"
+  },
+  "uploadFile": {
+    "selectedFile": "{count, plural, =0 {aucun fichier sélectionné } =1 {1 fichier sélectionné} other {# items fichiers sélectionnés}}",
+    "buttonLabel": "Choisir un fichier",
+    "labelSupprimer": "Supprimer"
+  },
+  "dialog": {
+    "closeSymbole": "X",
+    "closeLabel": "Abandonner la saisie",
+    "title": "Boîte de dialogue"
+  },
+  "notification": {
+    "errorsTitle": "Cette page contient des erreurs",
+    "warningsTitle": "Message d'alerte",
+    "infosTitle": "Messages d'information",
+    "personnalsTitle": "Message personnel"
+  },
+  "spinner": {
+    "loadingTitle": "Chargement...",
+    "loadingText": "Action en cours, veuillez patienter ..."
+  },
+  "menu": {
+    "mainMenu": "Menu principal",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "shortcuts": {
+      "enterSpace": "Entre dans le menu ou le sous menu ou active le lien",
+      "escape": "Ferme le menu",
+      "arrowLeft": "Passe au suivant ou au sous-menu",
+      "arrowUp": "Element précédent",
+      "arrowRight": "Passe au menu suivant ou dans un sous menu si on se trouve dans un menu",
+      "arrowDown": "Passe au contenu du menu ou à l'item suivant",
+      "shiftTab": "Fait sortir du menu. Ferme le menu si la tabulation sort de la barre de menu",
+      "tab": "Fait sortir du menu. Ferme le menu si la tabulation sort de la barre de menu"
+    }
+  },
+  "breadcrumb": {
+    "arialabel": "Fil d'ariane"
+  },
+  "shortcuts": {
+    "iconTitle": "Informations raccourcis",
+    "modalTitle": "Accessibilité Tableau",
+    "modalContentTitle": "Raccourcis clavier"
+  },
+  "toggleColumnsButton": {
+    "title": "Colonnes à afficher/masquer"
+  },
+  "user": {
+    "title": "Gestion de l'utilisateur"
+  },
+  "table": {
+    "pager": {
+      "dropdownTitle": "Nombre d'éléments {summary}",
+      "inputLabel": "Numéro de la page affichée du {summary}"
+    },
+    "menuActions": {
+      "title": "Menu d'actions"
+    },
+    "filterValid": "Filtrer",
+    "filterValidTitle": "Filtrer",
+    "filterCancel": "Annuler",
+    "filterCancelTitle": "Annuler",
+    "hideFiltering": "Cacher le filtre en cours",
+    "hideFilteringTitle": "Cacher le filtre en cours",
+    "hideFilter": "Cacher le filtrage",
+    "hideFilterTitle": "Cacher le filtrage",
+    "showFilter": "Afficher le filtrage",
+    "showFiltering": "Afficher le filtre en cours",
+    "emptyResult": "Aucune information à présenter.",
+    "loading": "chargement...",
+    "addTitle": "Ajouter",
+    "selectedTitle": "Sélectionner",
+    "selectedAllTitle": "Tout sélectionner",
+    "deselectedAllTitle": "Tout désélectionner",
+    "massActionConfirmMessage": "Etes-vous sûr(e) de vouloir supprimer ce(s) élément(s)",
+    "massActionConfirmTitle": "Supprimer ce(s) élément(s)",
+    "massActionTitle": "Suppression multiple",
+    "sortByTitle": "Trier par {columnTitle} {sortTitle}",
+    "sortedByTitle": "Trié par {columnTitle} {sortTitle}",
+    "descending": "dans l'ordre décroissant",
+    "ascending": "dans l'ordre croissant",
+    "rowNumber": "Lignes : ",
+    "pageFooter": "Afficher ",
+    "pageFooterOn": "sur",
+    "exportTitle": "Exporter au format {format}",
+    "numberElementTitle": "{count, plural, =0 {(aucun élément) } =1 {(1 élément)} other {(# éléments)}}",
+    "mediaTypeTitle": {
+      "xls": "Excel",
+      "csv": "CSV",
+      "pdf": "PDF"
+    },
+    "inputPage": "Saisie de la page à afficher",
+    "10": "10",
+    "20": "20",
+    "50": "50",
+    "100": "100",
+    "displayAll": "Afficher tout",
+    "formatDateInvalid": "Le format du champ « {title} » est incorrect.",
+    "shortcuts": {
+      "iconTitle": "Informations raccourcis",
+      "modalTitle": "Accessibilité Tableau",
+      "modalContentTitle": "Raccourcis clavier",
+      "navigation": "Navigation au sein du tableau",
+      "firstLine": "Première ligne",
+      "lastLine": "Dernière ligne",
+      "lineBeginning": "Début de ligne",
+      "lineEnd": "Fin de ligne",
+      "selectAll": "Sélectionner toutes les lignes",
+      "selectCurrentLine": "Sélectionner la ligne courante",
+      "toggleMode": "Basculer entre mode navigation simple (la tabulation fait sortir du tableau) et mode édition (la tabulation navigue entre les différents boutons d'action)",
+      "escape": "Retourner au mode navigation simple (la tabulation fait sortir du tableau)"
+    },
+    "booleanOui": "oui",
+    "booleanNon": "non"
+  },
+  "calendar": {
+    "agendaTitle": "Agenda",
+    "choiceDate": "Choisir une date",
+    "today": "Aujourd'hui",
+    "now": "Maintenant",
+    "ok": "Ok",
+    "clear": "Effacer",
+    "month": "Mois",
+    "year": "Année",
+    "hourPanelTitle": "Choisir une heure",
+    "minutePanelTitle": "Choisir une minute",
+    "secondPanelTitle": "Choisir une seconde",
+    "monthSelect": "Choisir un mois",
+    "yearSelect": "Choisir une année",
+    "decadeSelect": "Choisir une décade",
+    "yearFormat": "YYYY",
+    "dateFormat": "DD/MM/YYYY",
+    "monthYearFormat": "MMMM YYYY",
+    "monthFormat": "MMMM",
+    "monthBeforeYear": true,
+    "timezoneOffset": 60,
+    "firstDayOfWeek": 1,
+    "minimalDaysInFirstWeek": 1,
+    "placeHolder": "JJ/MM/AAAA"
+  },
+  "changeLanguage": {
+    "title": "Changer la langue"
+  },
+  "header": {
+    "logoTitle": "appliformation js lite - Retour vers la page d'accueil",
+    "contentTitle": "Aller au contenu de l'",
+    "menuTitle": "Aller au menu de l'",
+    "planTitle": "Plan de l'",
+    "accessTitle": "Politique d'accessibilité de l'",
+    "content": "Aller au contenu",
+    "menu": "Aller au menu",
+    "plan": "Plan de l'application",
+    "access": "Accessibilité",
+    "help": "Aide",
+    "contact": "Contact",
+    "contactTitle": "Contact de l'",
+    "expand": "Agrandir la page",
+    "contract": "Réduire la page"
+  },
+  "navigation": {
+    "welcome": "Accueil",
+    "accessibility": "Accessibilité",
+    "declarationconformity": "Déclaration de conformité",
+    "contact": "Contact",
+    "plan": "Plan de l'application",
+    "help": "Aide",
+    "connect": "Connexion",
+    "disconnect": "{userLogin} (Déconnexion)",
+    "submenu": "Sous-menu de "
+  },
+  "application": {
+    "headerTitle": "diplonet",
+    "headerTitleText": "Retour à l'accueil de Diplonet",
+    "user": {
+      "guest": "Invité"
+    }
+  },
+  "authPage": {
+    "title": "Authentification"
+  },
+  "contactPage": {
+    "title": "Contact",
+    "form": {
+      "fields": {
+        "nom": {
+          "label": "Nom",
+          "required": "Le champ « Nom » est obligatoire. Veuillez saisir ce champ."
+        },
+        "prenom": {
+          "label": "Prénom",
+          "required": "Le champ « Prénom » est obligatoire. Veuillez saisir ce champ."
+        },
+        "mail": {
+          "label": "Mail",
+          "required": "Le champ « Email » est obligatoire. Veuillez saisir ce champ.",
+          "format": "Le format du champ « Email » est incorrect (format attendu : nom@example.com)"
+        },
+        "message": {
+          "label": "Message",
+          "required": "Le champ « Message » est obligatoire. Veuillez saisir ce champ."
+        }
+      },
+      "validTitle": "Validation de la saisie du formulaire de contact",
+      "cancelTitle": "Annulation de la saisie du formulaire de contact"
+    },
+    "mailTemplate": "${content} \n\n Nom: ${name} \n Prénom: ${firstname} \n Mail: ${mail}",
+    "subject": "Contact depuis l'application"
+  },
+  "recherchePersonne": {
+    "form": {
+      "fields": {
+        "nom": {
+          "label": "Nom",
+          "required": "Le champ « Nom » est obligatoire. Veuillez saisir ce champ."
+        },
+        "prenom": {
+          "label": "Prénom"
+        },
+        "sexe": {
+          "label": "Sexe",
+          "required": "Le champ « Sexe » est obligatoire. Veuillez saisir ce champ."
+        },
+        "age": {
+          "label": "Age"
+        }
+      },
+      "sexe": {
+        "feminin" : {
+          "code": "F",
+          "libelle" : "Féminin"
+        },         
+        "masculin" : {
+          "code": "M",
+          "libelle" : "Masculin"
+        }
+      }
+    },
+    "tableau": {
+      "summary": "liste des personnes",
+      "ajouter": "Ajouter une personne", 
+      "colonnes": {
+        "nom": "Nom",
+        "prenom": "Prénom",
+        "sexe": "Sexe",
+        "age": "Age",
+        "suppression": "Suppression",
+        "suppressionTitle": "Suppression personne {nom} - {prenom} ",
+        "supprimer": {
+          "title": "Suppression personne",
+          "message": "Etes-vous sûr(e) de vouloir supprimer la personne ${nom} - ${prenom} ?"
+        }
+      }
+    }
+  },
+  "error": {
+    "message": {
+      "ERR_HORNET_SECURITY": "Authentification refusée: l'utilisateur ne possède pas les droits suffisants pour accéder cette ressource : {reportId}",
+      "ERR_HORNET_RESOURCE_NOTFOUND": "Ressource non trouvée - rapport d'incident : {reportId}",
+      "ERR_TECH_UNKNOWN": "Une erreur technique est survenue : {errorMessage} / rapport d'incident : {reportId}",
+      "ERR_AUTHENTICATION_FAILED": "Votre identifiant ou votre mot de passe est incorrect",
+      "ER-GE-APP-01": "HornetApp : Le composant à rendre est null",
+      "ER-GE-CNT-01": "Erreur dans l'action de demande de contact",
+      "ER-GE-CNT-02": "Aucune donnée fournie pour l'appel au service distant",
+      "ER-CL-CLI-01": "Une erreur technique est survenue: {error}",
+      "ERR-CODE-MAIL-001": "Un problème réseau (erreur SMTP) est survenu lors de l'envoi de mail",
+      "ER-PER-SUP-01": "Erreur lors de la suppression de la personne  « {$0} {$1} » !",
+      "ER-PER-SAUV-01": "Erreur lors de la création de la personne  « {$0} {$1} » !"
+    }
+  },
+  "info": {
+    "message": {
+      "IN-PER-SUP-01": "La personne « {$0} {$1} » a bien été supprimée.",
+      "IN-PER-SAUV-01": "La personne « {$0} {$1} » a bien été créée."
+    }
+  }
+}

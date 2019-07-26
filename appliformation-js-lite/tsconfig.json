@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "emitDecoratorMetadata": true,    
+    "esModuleInterop": false,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "target": "ES5",
+    "preserveSymlinks": true
+  },
+  "include": [
+    "index.ts",
+    "src/**/*.ts*",
+    "test/**/*.ts*",
+    "./node_modules/hornet-js-bean/index.d.ts",
+    "./node_modules/hornet-js-components/index.d.ts",
+    "./node_modules/hornet-js-core/index.d.ts",
+    "./node_modules/hornet-js-database/index.d.ts",
+    "./node_modules/hornet-js-logger/index.d.ts",
+    "./node_modules/hornet-js-utils/index.d.ts",
+    "./node_modules/hornet-js-passport/index.d.ts",
+    "./node_modules/hornet-js-react-components/index.d.ts",
+    "./node_modules/hornet-js-test/index.d.ts"
+  ],
+  "exclude": [
+    "istanbul"
+  ]
+}
