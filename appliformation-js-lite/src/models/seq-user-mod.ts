@@ -11,11 +11,7 @@ export interface UtilisateurAttributes extends HornetSequelizeAttributes {
 
 }
 
-export interface UtilisateurInstance extends Sequelize.Instance<UtilisateurAttributes>, UtilisateurAttributes {
-
-}
-
-export let UtilisateurModel: Sequelize.DefineAttributes = {
+export let UtilisateurModel: Sequelize.ModelAttributes = {
     id: {
         type: Sequelize.INTEGER,
         field: "id_utilisateur",

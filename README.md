@@ -18,8 +18,8 @@ Aperçu :
 ## Astuce
 - Utiliser le squelette généré à partir de [Tutoriel init projet hornet](https://github.com/diplomatiegouvfr/hornet-js-formation/tree/tuto_init_projet_hornet-js-lite)
 - Créer dans la dossier `src/views` un dossier `per`
-- Dans le dossier `src/wiews/per`, Créer le fichier `per-form-page.tsx`
-- Utiliser les composants `Form`, `InputField`, `CheckboxField`, `Button` (cf [showroom](https://diplomatiegouvfr.github.io/hornet-showroom-online/))
+- Dans le dossier `src/views/per`, Créer le fichier `per-form-page.tsx`
+- Utiliser les composants `Form`, `InputField`, `RadiosField`, `Button` (cf [showroom](https://diplomatiegouvfr.github.io/hornet-showroom-online/))
 - Dans le fichier `src/resources/messages-fr-FR.json`, ajouter les messages qui seront utilisés dans `per-form-page.tsx`
 - Ajouter dans le dossier `src/views` le fichier `per-form-page-validation.json` contenant le schéma de validation du formulaire
 - Créer le dossier `per` dans le répertoire `src/routes` et ajouter le fichier `per-client-routes.ts`.

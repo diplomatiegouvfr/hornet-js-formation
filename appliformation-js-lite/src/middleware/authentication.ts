@@ -1,5 +1,5 @@
 import { Utils } from "hornet-js-utils";
-import { Logger } from "hornet-js-utils/src/logger";
+import { Logger } from "hornet-js-logger/src/logger";
 
 const sha1 = require("sha1");
 const flash = require("connect-flash");
@@ -15,7 +15,7 @@ import { AuthService } from "src/services/data/auth/auth-service";
 
 export class AuthenticationMiddleware extends AbstractHornetMiddleware {
 
-    private static logger: Logger = Utils.getLogger("appliformation-js-lite.middleware.authentication");
+    private static logger: Logger = Logger.getLogger("appliformation-js-lite.middleware.authentication");
 
     protected api: AuthService;
 

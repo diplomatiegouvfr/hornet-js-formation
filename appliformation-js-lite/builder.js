@@ -13,7 +13,7 @@ const clientContext = [
 
 module.exports = {
     type: "application",
-    authorizedPrerelease: "false",
+    authorizedPrerelease: "true",
 
     gulpTasks: function (gulp, project, conf, helper) {
         //Add task if needed
@@ -25,10 +25,6 @@ module.exports = {
             helper.info("Exemple after compile task");
         });
          */
-        helper.excludeNodeModulesFromWebpack(
-            ["config", "continuation-local-storage", "sequelize", "pdfmake", "carbone", "csv-parser", "nodemailer"],
-            conf.webPackConfiguration
-        );
         // Exemple d'exclusion de fichiers/répertoires local à l'application
         // Cet exemple est complètement inutile puisque le client.js n'est pas dépendant des middlewares
         // Il est là à titre d'exemple uniquement
@@ -120,11 +116,6 @@ module.exports = {
             context: {
                 message: "test template"
             }
-        }],
-        dev: {
-            dllEntry: {
-                vendor: ["hornet-js-react-components", "hornet-js-components", "hornet-js-utils", "hornet-js-core", "hornet-js-bean"]
-            }
-        }
+        }]
     }
 };
